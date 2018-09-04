@@ -1,2 +1,3 @@
-# Website Short Circuit VR
-Website for Short Circuit VR | Electronics lab simulator
+# portfolio
+A personal website to showcase my projects.<br>
+website: https://cindyho97.github.io/portfolio/
