@@ -180,6 +180,10 @@ img { max-width: 100%; }
 
 iframe { border: none !important; }
 
+/* white text*/
+white-text {
+    color:  #c6c6c6;
+}
 
 /* ----------------------------------------------------------------
 	Basic Layout Styles
@@ -11120,6 +11124,20 @@ input[type=checkbox]:not(:checked) + label.error { display: block !important; }
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #333;
+}
+
+/* heading block white*/
+.heading-block-white h1,
+.heading-block-white h2,
+.heading-block-white h3,
+.heading-block-white h4,
+.emphasis-title-white h1,
+.emphasis-title-white h2 {
+	margin-bottom: 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #ededed;
 }
 
 .emphasis-title h1,

@@ -8,7 +8,7 @@
 
 :root{
 	--theme1: #117899;
-	--themecolor: #E83C3C;
+	--themecolor: #f16c20;
 }
 
 .bg1,
@@ -89,7 +89,11 @@
 
 .ytb-card { margin-top: -430px; }
 
-.device-xs .ytb-card { margin-top: -310px; }
+/* ytb-card extra top margin */
+
+.ytb-card-extra-top-margin {margin-top: -625px;}
+
+.device-xs .ytb-card-extra-top-margin { margin-top: -550px; }
 
 
 .showcase-section .showcase-target { display: none; }
