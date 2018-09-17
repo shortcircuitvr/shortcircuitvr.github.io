@@ -1,3 +1,3 @@
-# portfolio
-A personal website to showcase my projects.<br>
-website: https://cindyho97.github.io/portfolio/
+# Website for Short Circuit VR
+Website for Short Circuit VR WOOP WOOOPP<br>
+website: https://shortcircuitvr.github.io/
