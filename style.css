@@ -8770,6 +8770,23 @@ body:not(.device-touch) .social-icon i {
 .si-fivehundredpx:hover,
 .si-colored.si-fivehundredpx { background-color: #111 !important; }
 
+/* Steam Button */
+.steam-button { 
+    background-image: url(images/steam-button-border.png) !important;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: contain;
+    background-size: 150px;
+    width: 150px;
+    height: 54px !important;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.steam-button:hover {
+    background-image: url(images/steam-button-overlay.png) !important;
+}
+
 
 /* Social Icons Text Color
 -----------------------------------------------------------------*/

@@ -1045,10 +1045,11 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 	border-bottom-color: rgba(255,255,255,0.35);
 }
 
-
-.dark .footer-widgets-wrap a { color: #CCC; }
+/* Button footer white text */
+.dark .footer-widgets-wrap a { color: #fff; }
 
 .dark .footer-widgets-wrap a:hover { color: #999; }
+
 
 .dark .sidebar-widgets-wrap .widget,
 body.dark #side-panel .widget,
