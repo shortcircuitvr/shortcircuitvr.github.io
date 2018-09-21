@@ -9768,7 +9768,7 @@ body:not(.device-touch) .clients-grid li a {
 	width: 6px !important;
 	height: 6px !important;
 	border: none;
-	background-color: #1ABC9C;
+	background-color: #f16c20;
 	opacity: 0.5;
 }
 
