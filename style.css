@@ -410,11 +410,11 @@ span.middot {
 }
 
 .bgcolor,
-.bgcolor #header-wrap { background-color: #1ABC9C !important; }
+.bgcolor #header-wrap { background-color: #117899 !important; }
 
-.color { color: #1ABC9C !important; }
+.color { color: #117899 !important; }
 
-.border-color { border-color: #1ABC9C !important; }
+.border-color { border-color: #117899 !important; }
 
 .nobg { background: none !important; }
 
