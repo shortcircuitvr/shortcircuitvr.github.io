@@ -8889,7 +8889,7 @@ body:not(.device-touch) .social-icon i {
 	margin: 0;
 	font-size: 16px;
 	font-weight: 700;
-	color: #444;
+	color: #EEE;
 	cursor: pointer;
 }
 
@@ -8928,7 +8928,7 @@ body:not(.device-touch) .social-icon i {
 
 .toggle.toggle-bg .togglet,
 .toggle.toggle-bg .toggleta {
-	background-color: #EEE;
+	background-color: #1395ba;
 	line-height: 44px;
 	padding: 0 0 0 36px;
 	border-radius: 2px;
