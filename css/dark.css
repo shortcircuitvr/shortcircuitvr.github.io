@@ -1460,8 +1460,8 @@ body #side-panel.dark #side-panel-trigger-close a {
 .dark a.list-group-item.active:hover,
 .dark a.list-group-item.active:focus {
 	color: #ffffff;
-	background-color: #428bca;
-	border-color: #428bca;
+	background-color: #f16c20;
+	border-color: #f16c20;
 }
 
 .dark .list-group-item-success {
