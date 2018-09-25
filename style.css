@@ -3573,11 +3573,11 @@ body:not(.device-touch) .grid-container {
 
 .portfolio-filter li:last-child a { border-radius: 0 4px 4px 0; }
 
-.portfolio-filter li a:hover { color: #1ABC9C; }
+.portfolio-filter li a:hover { color: #f16c20; }
 
 .portfolio-filter li.activeFilter a {
 	color: #FFF !important;
-	background-color: #1ABC9C;
+	background-color: #f16c20;
 	margin: -1px 0;
 	padding: 13px 18px;
 	font-weight: bold;
@@ -3704,7 +3704,7 @@ body:not(.device-touch) .grid-container {
 }
 
 .portfolio-shuffle:hover {
-	background-color: #1ABC9C;
+	background-color: #f16c20;
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
@@ -9137,6 +9137,12 @@ ul.tab-nav:not(.tab-nav-lg) li.ui-tabs-active a {
 	background-color: #FFF;
 }
 
+/* center-ul */
+.center-ul {
+    display: flex;
+  justify-content: center;
+}
+
 
 /* Tabs - Alternate Nav
 -----------------------------------------------------------------*/
@@ -9211,9 +9217,13 @@ ul.tab-nav.tab-nav2 li a {
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+ul.tab-nav.tab-nav2 li a:hover {
+	color: #f16c20;
+}
+
 ul.tab-nav.tab-nav2 li.ui-state-active a {
 	top: 0;
-	background-color: #1ABC9C;
+	background-color: #f16c20;
 	color: #FFF;
 }
 
