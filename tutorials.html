@@ -141,22 +141,24 @@
                                 <div class="col-13">
                                     <div class="list-group" id="list-tab" role="tablist">
                                         <a class="list-group-item list-group-item-action active" id="list-save-list" data-toggle="list" href="#list-save" role="tab" aria-controls="save">How to import save file</a> 
-                                        <a class="list-group-item list-group-item-action" id="list-model-list" data-toggle="list" href="#list-model" role="tab" aria-controls="model">How to import 3D model</a>    
+                                        <a class="list-group-item list-group-item-action" id="list-model-list" data-toggle="list" href="#list-model" role="tab" aria-controls="model">How to import 3D model</a> 
+                                        <a class="list-group-item list-group-item-action" id="list-ch1-list" data-toggle="list" href="#list-ch1" role="tab" aria-controls="ch1">Challenge 1</a>   
+                                        <a class="list-group-item list-group-item-action" id="list-ch2-list" data-toggle="list" href="#list-ch2" role="tab" aria-controls="ch2">Challenge 2</a>   
+                                        <a class="list-group-item list-group-item-action" id="list-ch3-list" data-toggle="list" href="#list-ch3" role="tab" aria-controls="ch5">Challenge 3</a> 
+                                        <a class="list-group-item list-group-item-action" id="list-ch4-list" data-toggle="list" href="#list-ch4" role="tab" aria-controls="ch4">Challenge 4</a>   
+                                        <a class="list-group-item list-group-item-action" id="list-ch5-list" data-toggle="list" href="#list-ch5" role="tab" aria-controls="ch5">Challenge 5</a>   
+                                        <a class="list-group-item list-group-item-action" id="list-ch6-list" data-toggle="list" href="#list-ch6" role="tab" aria-controls="ch6">Challenge 6</a>   
+                                        <a class="list-group-item list-group-item-action" id="list-ch7-list" data-toggle="list" href="#list-ch7" role="tab" aria-controls="ch7">Challenge 7</a>   
+                                        <a class="list-group-item list-group-item-action" id="list-ch8-list" data-toggle="list" href="#list-ch8" role="tab" aria-controls="ch8">Challenge 8</a>   
+                                        <a class="list-group-item list-group-item-action" id="list-ch9-list" data-toggle="list" href="#list-ch9" role="tab" aria-controls="ch9">Challenge 9</a> 
+                                        <!--
                                         <div class="toggle">
-                                            <div class="togglet list-group-item" style="color: #fff !important;"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle" style="color: #fff !important;"></i>Challenges</div>
+                                            <div class="togglet list-group-item list-group-item-action"  data-toggle="list" role="tab" style="color: #fff !important;"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle" style="color: #fff !important;"></i>Challenges</div> 
                                             <div class="togglec" style="color: #fff !important;">
-                                                <a class="list-group-item list-group-item-action" id="list-ch1-list" data-toggle="list" href="#list-ch1" role="tab" aria-controls="ch1">Challenge 1</a>   
-                                                <a class="list-group-item list-group-item-action" id="list-ch2-list" data-toggle="list" href="#list-ch2" role="tab" aria-controls="ch2">Challenge 2</a>   
-                                                <a class="list-group-item list-group-item-action" id="list-ch3-list" data-toggle="list" href="#list-ch3" role="tab" aria-controls="ch5">Challenge 3</a> 
-                                                <a class="list-group-item list-group-item-action" id="list-ch4-list" data-toggle="list" href="#list-ch4" role="tab" aria-controls="ch4">Challenge 4</a>   
-                                                <a class="list-group-item list-group-item-action" id="list-ch5-list" data-toggle="list" href="#list-ch5" role="tab" aria-controls="ch5">Challenge 5</a>   
-                                                <a class="list-group-item list-group-item-action" id="list-ch6-list" data-toggle="list" href="#list-ch6" role="tab" aria-controls="ch6">Challenge 6</a>   
-                                                <a class="list-group-item list-group-item-action" id="list-ch7-list" data-toggle="list" href="#list-ch7" role="tab" aria-controls="ch7">Challenge 7</a>   
-                                                <a class="list-group-item list-group-item-action" id="list-ch8-list" data-toggle="list" href="#list-ch8" role="tab" aria-controls="ch8">Challenge 8</a>   
-                                                <a class="list-group-item list-group-item-action" id="list-ch9-list" data-toggle="list" href="#list-ch9" role="tab" aria-controls="ch9">Challenge 9</a> 
+
+                                                
                                             </div>
-                                        </div>
-                                         
+                                        </div>--> 
                                     </div>
                                  </div>
                                         
@@ -317,141 +319,7 @@
 	============================================= -->
 	<script src="js/functions.js"></script>
 
-	<script>
-		$('#ytb-video').on('click', function(e){
-			e.preventDefault();
-
-			if( $(this).hasClass('video-played') ) {
-				$('#ytb-video').YTPPause();
-			} else {
-				$('#ytb-video').YTPPlay();
-				$('.ytb-poster').stop(true,true).fadeTo( "slow", 0 );
-			}
-
-			$(this).toggleClass('video-played');
-		});
-
-
-		function showcaseSection( element ){
-
-			var otherElements = element.parents('.showcase-section').find('.showcase-feature'),
-				elementTarget = jQuery( element.attr('data-target') ),
-				otherTargets = element.parents('.showcase-section').find('.showcase-target');
-
-			otherElements.removeClass('showcase-feature-active');
-			element.addClass('showcase-feature-active');
-			otherTargets.removeClass('showcase-target-active');
-			elementTarget.addClass('showcase-target-active');
-
-		}
-
-		jQuery('.showcase-feature').hover( function(){
-			showcaseSection( jQuery(this) );
-		});
-
-		$(document).ready( function() {
-
-			var pricingBikes = 1,
-				days = 1,
-				elementbikes = $(".range-slider-bikes"),
-				elementDays = $(".range-slider-days");
-
-			elementbikes.ionRangeSlider({
-				grid: false,
-				step: 1,
-				min: 1,
-				from:1,
-				max: 5,
-				postfix: ' Bike(s)',
-				onStart: function(data){
-					pricingBikes = data.from;
-				}
-			});
-
-			elementbikes.on( 'change', function(){
-				pricingBikes = $(this).prop('value');
-				calculatePrice( pricingBikes, days );
-			});
-
-			elementDays.ionRangeSlider({
-				grid: false,
-				step: 1,
-				min: 1,
-				from: 4,
-				max: 30,
-				postfix: ' Days',
-				onStart: function(data){
-					days = data.from;
-					console.log(data);
-				}
-			});
-
-			elementDays.on( 'onStart change', function(){
-				days = $(this).prop('value');
-				calculatePrice( pricingBikes, days );
-			});
-
-			calculatePrice( pricingBikes, days );
-
-			function calculatePrice( bikes, days ) {
-				var pricingValue = ( Number(bikes) * 1 ) * ( Number(days) * 2 );
-				jQuery('.pricing-price').html( '$'+pricingValue );
-			}
-
-		});
-	</script>
     
-    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
-	<script src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-	<script src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="include/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
-	<script src="include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script src="include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
-	<script src="include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
-
-	<script>
-		var tpj=jQuery;
-		var revapi84;
-		tpj(document).ready(function() {
-			if(tpj("#rev_slider_84_1").revolution == undefined){
-				revslider_showDoubleJqueryError("#rev_slider_84_1");
-			}else{
-				revapi84 = tpj("#rev_slider_84_1").show().revolution({
-					sliderType:"standard",
-					jsFileLocation:"include/rs-plugin/js/",
-					sliderLayout:"fullscreen",
-					dottedOverlay:"none",
-					delay:9000,
-					navigation: {
-						onHoverStop:"off",
-					},
-					responsiveLevels:[1240,1024,778,480],
-					gridwidth:[1240,1024,778,480],
-					gridheight:[600,500,400,270],
-					lazyType:"none",
-					shadow:0,
-					spinner:"off",
-					stopLoop:"on",
-					stopAfterLoops:0,
-					stopAtSlide:1,
-					shuffle:"off",
-					autoHeight:"off",
-					disableProgressBar:"on",
-					hideThumbsOnMobile:"off",
-					hideSliderAtLimit:0,
-					hideCaptionAtLimit:0,
-					hideAllCaptionAtLilmit:0,
-					debugMode:false,
-					fallbacks: {
-						simplifyAll:"off",
-						nextSlideOnWindowFocus:"off",
-						disableFocusListener:false,
-					}
-				});
-			}
-		});	/*ready*/
-	</script>
 
 </body>
 </html>
