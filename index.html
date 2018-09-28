@@ -268,35 +268,22 @@
 					</div>
 				</div>
                 
+                
 				<div class="section section-curve notopmargin" style="background: var(--theme1) url('demos/bike/images/hero-bike.png') right 70% / cover; height: 750px;">
-
-					<div class="container center">
+                    <div class="container center" style="max-width: 800px;">
 						<div class="heading-block-white mt-4 nobottomborder">
 							<h1 class="nott t600" style="font-size: 44px; letter-spacing: -1px">Watch The Feature Trailer</h1>
 						</div>
-                        
+                    </div>
+                        <div class="container" style="max-width: 800px;">
+                        <div class="embed-responsive embed-responsive-16by9" style="padding-bottom: 500px;">
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RHujLVYD5-c?rel=0"></iframe>       
+                        </div>
+					
 					</div>
 
 				</div>
-
-				<div class="container">
-                        
-                        <!--<div class="card border-0 divcenter rounded ytb-card-extra-top-margin" style="box-shadow: 0 32px 46px 2px rgba(0,0,0,0.12);">-->
-                        <div class="card border-0 divcenter rounded ytb-card" style="box-shadow: 0 32px 46px 2px rgba(0,0,0,0.12);">
-						<div id="ytb-video" class="yt-bg-player card-img-top rounded-top" data-quality="hd1080" data-volume="80" data-mute="false" data-autoplay="false" data-video="https://youtu.be/RHujLVYD5-c">
-							<div class="ytb-poster rounded-top" style="background: url('images/video-background-image.jpg') center center / cover; position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
-							</div>
-							<a href="#" id="ytb-video-button" class="play-icon"><i class="icon-play"></i><i class="icon-pause"></i></a>
-							</div>
-                            
-                   <!-- <div class="embed-responsive embed-responsive-4by3">
-                          <iframe class="embed-responsive-item" src="https://youtu.be/RHujLVYD5-c"></iframe>
-                        </div>
-                  
-                    -->
-                                
-                    </div>
-				</div>
+                
 
 				<div class="section nobg topmargin-lg mb-0">
 					<div class="container">
@@ -361,6 +348,12 @@
 							<h2 class="capitalize t600 mb-2" style="font-size: 36px; letter-spacing: -1px">Why is it free?</h2>
 							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
                             <div class="button button-xlarge ls0 button-rounded button-shadow nott t400 ">Download Now</div>
+                            <!--
+                            <div class="embed-responsive embed-responsive-4by3" >
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RHujLVYD5-c?rel=0"></iframe>
+                           
+                                
+                            </div>-->
 						</div>
 					</div>
 				</div>
@@ -579,56 +572,6 @@
 			showcaseSection( jQuery(this) );
 		});
 
-		$(document).ready( function() {
-
-			var pricingBikes = 1,
-				days = 1,
-				elementbikes = $(".range-slider-bikes"),
-				elementDays = $(".range-slider-days");
-
-			elementbikes.ionRangeSlider({
-				grid: false,
-				step: 1,
-				min: 1,
-				from:1,
-				max: 5,
-				postfix: ' Bike(s)',
-				onStart: function(data){
-					pricingBikes = data.from;
-				}
-			});
-
-			elementbikes.on( 'change', function(){
-				pricingBikes = $(this).prop('value');
-				calculatePrice( pricingBikes, days );
-			});
-
-			elementDays.ionRangeSlider({
-				grid: false,
-				step: 1,
-				min: 1,
-				from: 4,
-				max: 30,
-				postfix: ' Days',
-				onStart: function(data){
-					days = data.from;
-					console.log(data);
-				}
-			});
-
-			elementDays.on( 'onStart change', function(){
-				days = $(this).prop('value');
-				calculatePrice( pricingBikes, days );
-			});
-
-			calculatePrice( pricingBikes, days );
-
-			function calculatePrice( bikes, days ) {
-				var pricingValue = ( Number(bikes) * 1 ) * ( Number(days) * 2 );
-				jQuery('.pricing-price').html( '$'+pricingValue );
-			}
-
-		});
 	</script>
     
     <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
