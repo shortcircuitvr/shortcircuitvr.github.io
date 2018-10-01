@@ -176,7 +176,10 @@ a:hover { color: #222; }
 
 a img { border: none; }
 
-img { max-width: 100%; }
+img { 
+    max-width: 100%; 
+    pointer-events: none; /* Add for save image protection! */
+}
 
 iframe { border: none !important; }
 
