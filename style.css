@@ -4640,6 +4640,7 @@ body.device-touch.device-xs .portfolio-notitle .portfolio-overlay { display: non
 	max-width: 100% !important;
 	overflow: hidden;
 }
+.masonry-thumbs.grid-1 a { width: 70%; }
 
 .masonry-thumbs.grid-2 a { width: 50%; }
 
