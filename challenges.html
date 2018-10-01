@@ -177,7 +177,7 @@
 									<div class="tab-pane fade show active" id="list-ch1" role="tabpanel" aria-labelledby="list-ch1-list">
                                         <h2>Challenge 1: Breadboard &amp; Closed Circuit</h2>
                                         <p>The first challenge is more of an introduction to the breadboard and the idea of a closed circuit.</p>
-                                        <small>image: ch1 tablemat</small>
+                                        <small>diagram: ch1 tablemat</small>
                                         <h4>What is electricity?</h4>
                                         <h4>What is a power source?</h4>
                                         <p>You need a power source to ...</p>
@@ -187,7 +187,7 @@
                                         <h4>What is a breadboard?</h4>
 										<p>A breadboard is a board with a bunch of holes (terminals) connected internally in a certain way which makes connecting components or wires together very simple. The breadboard used in Short Circuit VR has two horizontal strips of terminals at the top and at the bottom as well. Each terminal in a horizontal strip is internally connected with the other terminals in that strip. Besides the horizontal strips you’ve got two blocks of 30 vertical strips, each made of 5 terminals. Again each terminal in a strip is connected with all the other terminals in that strip.</p>
                                         <img src="images/breadboard_info.jpg" style="max-width: 400px;">
-                                        <h4>How do you use a breadboard?</h4>
+                                        <h4>How do I use a breadboard?</h4>
                                         <p>Usually the battery or some other power source is connected to the horizontal strips, and then some wires will connect the horizontal strips to some vertical strips where components can be placed easier. </p>
                                         <small>image: breadboard with battery connected to horizontal strip and random component on horizontal strips with wires connected.</small>
                                         <h4>What is a closed circuit?</h4>
@@ -209,14 +209,15 @@
 									<div class="tab-pane fade" id="list-ch2" role="tabpanel" aria-labelledby="list-ch2-list">
 										<h2>Challenge 2: LED</h2>
                                         <p>Challenge two asks the player to connect a LED correctly.</p>
-                                        <small>image: ch2 tablemat</small>
+                                        <small>diagram: ch2 tablemat</small>
                                         <h4>What is a LED &#40;diode&#41;?</h4>
                                         <p>LED is short for Light Emitting Diode. As the name suggests a led is a diode. In general a diode is an electronic component that allows current to flow in one direction but not in the other. So the polarity of this component is important to keep in mind or else no current can pass through the LED and therefore it cannot light up. The terminals of a diode are called Anode and Cathode.</p>
                                         <small>diagram: cathode and anode led</small>
-                                        <h4>How do you use a LED?</h4>
+                                        <h4>How do I use a LED?</h4>
                                         <p>The cathode has to be connected to the negative side of a circuit and the anode to the positive side to have it forward biased. 
                                             <br>Besides polarity being an important issue it is equally important to add a resistor to restrict the current. The resistor we need depends on what voltage the power source has that we will be using. A diode needs a specific voltage to be able to work (voltage drop), but too much voltage will break it. A regular LED, as in the application has a voltage drop of 1.8V(check in app to be sure) and a max current of 20mA. 
                                         </p>
+                                        <small>image: led</small>
                                         <h4>How to calculate the value of the resistor?</h4>
                                         <p>To calculate the resistor we will be needing if we use a 9V battery for example, we can calculate it as following using Ohm’s law: (9V-1.8V) = 7.2V  -> (7.2V/0.02A) = 360Ω. This means our resistor has to be at least 360 Ohm if we want max brightness. It is always safer to take a resistor with a little higher value. 390 Ohm is the first resistor closest to the value so we could use that. (double check calculations based of values in game)</p>
                                         <small>diagram: ohm's law with default formula and formula with values</small>
@@ -224,32 +225,130 @@
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec"><p>solution</p>
                                                 <small>image: breadboard, battery, resistor and led</small>
-                                            </div>
-                                            
+                                            </div>    
                                         </div>
 									</div>
+                                    
                                     <!-- Challenge 3 -->
 									<div class="tab-pane fade" id="list-ch3" role="tabpanel" aria-labelledby="list-ch3-list">
 										<h2>Challenge 3: Slide Switch</h2>
                                         <p>The third challenge is connecting a slide switch with a LED.</p>
+                                        <small>diagram: ch3 tablemat</small>
+                                        <h4>What is a slide switch?</h4>
+                                        <p>A slide switch can be used to toggle a connection. Adding a slide switch between the led and power source will enable you to close and open the loop, thus giving you the option to toggle the light on and off. </p>
+                                        <small>image: slide switch</small>
+                                        <h4>How do I use a slide switch?</h4>
+                                        <p>A slide switch has 3 terminals in total. One of the two outer terminals is connected to the center terminal and by sliding the switch you disconnect the center terminal from the one outer terminal and connect it with the other one instead.</p>
+                                        <small>diagram: handle left and right</small>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery, resistor, led and slide switch</small>
+                                            </div>            
+                                        </div>
 									</div>
+                                    
+                                    <!-- Challenge 4 -->
 									<div class="tab-pane fade" id="list-ch4" role="tabpanel" aria-labelledby="list-ch4-list">
 										<h2>Challenge 4: Pushbutton</h2>
+                                        <p>The fourth challenge is quite similar to the third. Instead of using a slide switch to toggle the led you must use a pushbutton.</p>
+                                        <small>diagram: ch4 tablemat</small>
+                                        <h4>What is a pushbutton?</h4>
+                                        <p>When pressing on a pushbutton it will interconnect all the terminals together. So placing a pushbutton in a circuit will keep the circuit open and thus prevent any current from flowing until a person presses on it and closes the loop again. However once the person releases the pushbutton it will re-open the loop.</p>
+                                        <small>image: pushbutton</small>
+                                        <h4>How do you I a pushbutton?</h4>
+                                        <p>A pushbutton has 4 terminals, but internally each terminal is connected with its opposing terminal. Therefore you only need to use two of the terminals in your circuit. So in this challenge the led will only light up while you keep pressing the pushbutton.
+                                        </p>
+                                        <small>diagram: push and release state</small>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery, resistor, led and pushbutton</small>
+                                            </div>            
+                                        </div>
 									</div>
+                                    <!-- Challenge 5 -->
                                     <div class="tab-pane fade" id="list-ch5" role="tabpanel" aria-labelledby="list-ch5-list">
 										<h2>Challenge 5: Potentiometer</h2>
+                                        <p>Challenge 5 is an introduction to the potentiometer.</p>
+                                        <small>diagram: ch5 tablemat</small>
+                                        <h4>What is a potentiometer?</h4>
+                                        <p>A potentiometer is basically two resistors which values change as you turn the wheel. When you turn the wheel one direction one resistor will reduce in resistance while the other increases in resistance.</p>
+                                        <small>image: potentiometer</small>
+                                        <h4>How do I use a potentiometer?</h4>
+                                        <p>The three terminal on the potentiometer are as follows: the outer terminals are each connected to an end of one of the two resistors and the middle terminal is connected at the middle where both resistors are connected. </p>
+                                            <small>diagram: terminals of potentiometer</small> <p>So just like by the slide switch you only need to use two terminals; an outer pin and the center pin. Connecting this in a loop will change the increase/decrease the current flow when turning on the wheel. Connecting this with led enables us to increase and decrease the the brightness accordingly.
+                                        </p>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery, resistor, led and potentiometer</small>
+                                            </div>            
+                                        </div>
 									</div>
+                                    <!-- Challenge 6 -->
                                     <div class="tab-pane fade" id="list-ch6" role="tabpanel" aria-labelledby="list-ch6-list">
 										<h2>Challenge 6: 7 Segment Display</h2>
+                                        <p>Challenge 6 brings in a new component: The seven segment display. A name which may be a little confusing as it actually has 8 displays if you include the comma at the bottom right corner.</p>
+                                        <h4>What is a 7 segment display?</h4>
+                                        <p>Basically all the 7 segment display really is, is a bunch of leds internally. The specific 7 segment display used in Short Circuit VR is a common cathode, which means that each cathode of the 8 leds is connected internally to the center pins at the top and at the bottom. So all the other pins are just the anodes of each led. See the diagram to know which anode belongs to which segment exactly.</p>
+                                        <small>diagram: 7 segment display</small>
+                                        <h4>How do I use a 7 segment display?</h4>
+                                        <p>Connecting either one of the center pins to the negative terminal of the power source is sufficient as they’re both internally connected anyway. As the segments are leds, each one connected still needs a resistor to go before it. To finish this challenge successfully you can pick any anode to connect (with a resistor) to the positive terminal of the battery and connect the common cathode to the negative terminal.
+                                        </p>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery, resistor and 7 segment display</small>
+                                            </div>            
+                                        </div>
 									</div>
+                                    <!-- Challenge 7 -->
                                     <div class="tab-pane fade" id="list-ch7" role="tabpanel" aria-labelledby="list-ch7-list">
 										<h2>Challenge 7: 7 Segment Display (4)</h2>
+                                        <p>Challenge 7 is piece of cake if you’ve understood challenge 6. Instead of connecting only one anode you need to connect several (4 leds to be exact) more to make the 4 shape on the 7 segment display. Remember that each connected anode needs a resistor in front of it. 
+                                        </p>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery, resistors and 7 segment display displaying '4'</small>
+                                            </div>            
+                                        </div>
 									</div>
+                                    <!-- Challenge 8 -->
                                     <div class="tab-pane fade" id="list-ch8" role="tabpanel" aria-labelledby="list-ch8-list">
 										<h2>Challenge 8: Buzzer</h2>
+                                        <p>Challenge 8 asks the player to connect a buzzer. </p>
+                                        <h4>What is a buzzer?</h4>
+                                        <p>Buzzers are electronic component which make a noise at a specific frequency. There are several buzzers in the components menu to give you the option to pick a buzzer with a certain frequency of your liking.</p>
+                                        <small>image: buzzer</small>
+                                        <h4>How do I use a buzzer?</h4>
+                                        <p>A buzzer does have a polarity, much like a diode. Connecting it in wrongly can destroy a buzzer. Luckily you are allowed to make mistakes in Short Circuit VR, but this challenge isn’t too hard as the wires of the buzzer indicate quite clearly which end needs to be connected to which terminal of the power source. </p>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery and buzzer</small>
+                                            </div>            
+                                        </div>
 									</div>
+                                    
+                                    <!-- Challenge 9 -->
                                     <div class="tab-pane fade" id="list-ch9" role="tabpanel" aria-labelledby="list-ch9-list">
 										<h2>Challenge 9: DC Motor</h2>
+                                        <p>In Challenge 9 we get to work with a DC motor and a potentiometer. The potentiometer has to be connected in a similar way as in Challenge 5, but instead of dimming a led we will be controlling the speed of the motor.</p>
+                                        
+                                        <h4>What is a DC motor?</h4>
+                                        <p>A DC motor is a fun little component which turns depending on how much current is flowing through it. Once turning you can hover with your controller over it to see the rotations per minute. A DC motor can be connected both ways but depending on the polarity the motor will turn one way or the other.</p>
+                                        <small>image: dc motor</small>
+                                        <h4>How do I use a DC motor?</h4>
+                                        <p>To get started you will have to spawn wires out of the components menu and then attach one end of each wire to a terminal of the motor as the terminals of the motor do not snap into the breadboard directly. Once you’ve connected everything as shown in the diagram you’ll be able to turn the potentiometer and slow down or speed up the motor. You can attach an object to the tip of the motor to watch it turn more clearly. 
+                                        </p>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery , dc motor and random object</small>
+                                            </div>            
+                                        </div>
 									</div>
 								</div>
 							</div>
