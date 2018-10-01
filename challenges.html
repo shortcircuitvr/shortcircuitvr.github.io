@@ -141,7 +141,7 @@
                                 <div class="col-13">
                                     <div class="list-group" id="list-tab" role="tablist">
                                         <a class="list-group-item list-group-item-action active" id="list-ch1-list" data-toggle="list" href="#list-ch1" role="tab" aria-controls="ch1">Challenge 1 
-                                            <small class="text-white-50 uppercase t500"><br>Breadboard &amp; Closed Loop</small></a>
+                                            <small class="text-white-50 uppercase t500"><br>Breadboard &amp; <br>Closed Circuit</small></a>
                                         <a class="list-group-item list-group-item-action" id="list-ch2-list" data-toggle="list" href="#list-ch2" role="tab" aria-controls="ch2">Challenge 2
                                             <small class="text-white-50 uppercase t500"><br>LED</small></a>     
                                         <a class="list-group-item list-group-item-action" id="list-ch3-list" data-toggle="list" href="#list-ch3" role="tab" aria-controls="ch3">Challenge 3
@@ -173,22 +173,65 @@
 							
 							<div class="col-12">
 								<div class="tab-content" id="nav-tabContent">
+                                    <!-- Challenge 1 -->
 									<div class="tab-pane fade show active" id="list-ch1" role="tabpanel" aria-labelledby="list-ch1-list">
-                                        <h2>Challenge 1: Breadboard &amp; Closed Loop</h2>
+                                        <h2>Challenge 1: Breadboard &amp; Closed Circuit</h2>
+                                        <p>The first challenge is more of an introduction to the breadboard and the idea of a closed circuit.</p>
+                                        <small>image: ch1 tablemat</small>
+                                        <h4>What is electricity?</h4>
+                                        <h4>What is a power source?</h4>
+                                        <p>You need a power source to ...</p>
+                                        <img src="images/power_source_info.jpg" style="max-width: 350px;">
+                                        <h4>Why do I need to use wires?</h4>
+                                        
                                         <h4>What is a breadboard?</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nisi veritatis enim, eaque quibusdam eius vel? Vel natus adipisci sit, omnis et enim nostrum quia hic atque odit, numquam deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum libero vitae neque laboriosam suscipit cupiditate animi porro distinctio excepturi, beatae quas officiis dolorem sit aliquid vel ab consequatur eveniet soluta necessitatibus quidem? Iure, consequuntur non odio accusamus est repudiandae culpa!</p>
-                                        <h4>How does a breadboard work?</h4>
-                                        <p>irujhtgqeiorttaeqlitufheqlhuql</p>
+										<p>A breadboard is a board with a bunch of holes (terminals) connected internally in a certain way which makes connecting components or wires together very simple. The breadboard used in Short Circuit VR has two horizontal strips of terminals at the top and at the bottom as well. Each terminal in a horizontal strip is internally connected with the other terminals in that strip. Besides the horizontal strips you’ve got two blocks of 30 vertical strips, each made of 5 terminals. Again each terminal in a strip is connected with all the other terminals in that strip.</p>
+                                        <img src="images/breadboard_info.jpg" style="max-width: 400px;">
+                                        <h4>How do you use a breadboard?</h4>
+                                        <p>Usually the battery or some other power source is connected to the horizontal strips, and then some wires will connect the horizontal strips to some vertical strips where components can be placed easier. </p>
+                                        <small>image: breadboard with battery connected to horizontal strip and random component on horizontal strips with wires connected.</small>
+                                        <h4>What is a closed circuit?</h4>
+                                        <p>For electricity to flow you’ll need a closed circuit as electrons (conventionally!) flow from the positive terminal of the power source to the negative terminal of the power source. But just connecting two power source terminals together will create a too high current and may end up breaking or even burning something. This is called a short circuit and must be avoided at all times.</p>
+                                        <small>diagram: indicate flow of electrons on ch1 diagram.</small>
+                                        <h4>How do you avoid a short circuit?</h4>
+                                        <p>To restrict the current from flowing this much we can use a resistor. Resistors come in many different values. The higher the value the more it will restrict the current.</p>
+                                        <small>image: random resistor</small>
                                         <div class="toggle toggle-bg">
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
-                                            <div class="togglec">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</div>
+                                            <div class="togglec"><p>To successfully finish the challenge, you can spawn any resistor out of the components menu and add it on the breadboard. Make sure both terminals are not placed in the same strip and with two separate wires you can spawn, you can connect each strip to the horizontal strips connected to the battery.</p>
+                                                <small>image: breadboard, battery and resistor --> closed circuit</small>
+                                            </div>
+                                            
                                         </div>
 									</div>
+                                    
+                                    <!-- Challenge 2 -->
 									<div class="tab-pane fade" id="list-ch2" role="tabpanel" aria-labelledby="list-ch2-list">
 										<h2>Challenge 2: LED</h2>
+                                        <p>Challenge two asks the player to connect a LED correctly.</p>
+                                        <small>image: ch2 tablemat</small>
+                                        <h4>What is a LED &#40;diode&#41;?</h4>
+                                        <p>LED is short for Light Emitting Diode. As the name suggests a led is a diode. In general a diode is an electronic component that allows current to flow in one direction but not in the other. So the polarity of this component is important to keep in mind or else no current can pass through the LED and therefore it cannot light up. The terminals of a diode are called Anode and Cathode.</p>
+                                        <small>diagram: cathode and anode led</small>
+                                        <h4>How do you use a LED?</h4>
+                                        <p>The cathode has to be connected to the negative side of a circuit and the anode to the positive side to have it forward biased. 
+                                            <br>Besides polarity being an important issue it is equally important to add a resistor to restrict the current. The resistor we need depends on what voltage the power source has that we will be using. A diode needs a specific voltage to be able to work (voltage drop), but too much voltage will break it. A regular LED, as in the application has a voltage drop of 1.8V(check in app to be sure) and a max current of 20mA. 
+                                        </p>
+                                        <h4>How to calculate the value of the resistor?</h4>
+                                        <p>To calculate the resistor we will be needing if we use a 9V battery for example, we can calculate it as following using Ohm’s law: (9V-1.8V) = 7.2V  -> (7.2V/0.02A) = 360Ω. This means our resistor has to be at least 360 Ohm if we want max brightness. It is always safer to take a resistor with a little higher value. 390 Ohm is the first resistor closest to the value so we could use that. (double check calculations based of values in game)</p>
+                                        <small>diagram: ohm's law with default formula and formula with values</small>
+                                        <div class="toggle toggle-bg">
+                                            <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
+                                            <div class="togglec"><p>solution</p>
+                                                <small>image: breadboard, battery, resistor and led</small>
+                                            </div>
+                                            
+                                        </div>
 									</div>
+                                    <!-- Challenge 3 -->
 									<div class="tab-pane fade" id="list-ch3" role="tabpanel" aria-labelledby="list-ch3-list">
 										<h2>Challenge 3: Slide Switch</h2>
+                                        <p>The third challenge is connecting a slide switch with a LED.</p>
 									</div>
 									<div class="tab-pane fade" id="list-ch4" role="tabpanel" aria-labelledby="list-ch4-list">
 										<h2>Challenge 4: Pushbutton</h2>
