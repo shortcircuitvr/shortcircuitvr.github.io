@@ -9,6 +9,13 @@ $.fn.doOnce = function( func ) {
 	return this;
 };
 
+$( "#stefanfix" ).click(function() { //fix to make models tab pop open automatically
+    setTimeout(function () {
+          $("#portfolio-filter-model > .activeFilter > a").click();
+    }, 100);
+});
+
+
 (function() {
 	var lastTime = 0;
 	var vendors = ['ms', 'moz', 'webkit', 'o'];
