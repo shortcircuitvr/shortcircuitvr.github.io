@@ -3757,6 +3757,15 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .portfolio-notitle .port
 	transition: all .2s ease-in-out;
 }
 
+/*etxra: image max-width*/
+.max-250 {
+    max-width: 250px;
+}
+.max-350 {
+    max-width: 350px;
+}
+
+
 
 /* Portfolio - Item Title
 -----------------------------------------------------------------*/
