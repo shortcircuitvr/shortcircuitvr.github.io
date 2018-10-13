@@ -4148,9 +4148,9 @@ body.device-touch.device-xs .portfolio-notitle .portfolio-desc { display: none !
 	float: none;
 	width: 100%;
 	margin: 0 0 40px 0;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	padding-right: 0;
-	border-bottom: 1px solid #EEE;
+	/*border-bottom: 1px solid #EEE; EDIT*/
 }
 
 .portfolio-1 .portfolio-item .portfolio-image {
