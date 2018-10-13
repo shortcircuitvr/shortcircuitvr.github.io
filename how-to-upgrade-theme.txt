@@ -1,0 +1,4 @@
+1. Open "index.html" file in 'Package-HTML\Documentation\' folder with Brackets
+2. Start Live preview of this page
+3. Go to "Changelog"
+4. Add/modify the code in your existing files to the new version codes
