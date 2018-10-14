@@ -1,10 +1,10 @@
 /************************************************
- * REVOLUTION 5.4.6.4 EXTENSION - LAYER ANIMATION
- * @version: 3.6.4 (28.11.2017)
+ * REVOLUTION 5.4.6.5 EXTENSION - LAYER ANIMATION
+ * @version: 3.6.5 (10.06.2018)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 ************************************************/
-(function($) {
+;(function($) {
 	"use strict";
 
 var _R = jQuery.fn.revolution,
@@ -13,7 +13,7 @@ var _R = jQuery.fn.revolution,
 	extension = {	alias:"LayerAnimation Min JS",
 					name:"revolution.extensions.layeranimation.min.js",
 					min_core: "5.4.6.4",
-					version:"3.6.4"
+					version:"3.6.5"
 			  };
 	
 
@@ -344,8 +344,8 @@ jQuery.extend(true,_R, {
 			internrecall = obj.recall,						
 			preset = obj.preset,
 			rtl = jQuery('body').hasClass("rtl"),
-			datas
-
+			datas;
+		
 		_._pw = _._pw===undefined ? _nc.closest('.tp-parallax-wrap') : _._pw;
 		_._lw = _._lw===undefined ? _nc.closest('.tp-loop-wrap') : _._lw;
 		_._mw = _._mw===undefined ? _nc.closest('.tp-mask-wrap') : _._mw;
@@ -1559,6 +1559,10 @@ var tweenOnComplete = function(frame_index,frame_max,verylastframe,pw,_,tl,ust,_
 		_.animdirection="out";
 		_.visibleelement=false;
 		_R.unToggleState(_.layertoggledby);
+		//RESET VIDEO AFTER REMOVING LAYER
+		if (_._nctype==="video" && _R.resetVideo) setTimeout(function() {			
+			_R.resetVideo(_nc,opt);			
+		},100);
 	}
 	_.current_frame = frame_index;
 	_.current_timeline = tl;

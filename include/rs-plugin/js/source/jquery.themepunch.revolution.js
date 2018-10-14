@@ -1,22 +1,22 @@
 /**************************************************************************
  * jquery.themepunch.revolution.js - jQuery Plugin for Revolution Slider
- * @version: 5.4.6.4 (28.11.2017)
+ * @version: 5.4.8 (10.06.2018)
  * @requires jQuery v1.7 or later (tested on 1.9)
  * @author ThemePunch
 **************************************************************************/
-(function(jQuery,undefined){
+;(function(jQuery,undefined){
 "use strict";
 		
 	var version = {
-					core : "5.4.6.4",
+					core : "5.4.8",
 					"revolution.extensions.actions.min.js":"2.1.0",
 					"revolution.extensions.carousel.min.js":"1.2.1",
 					"revolution.extensions.kenburn.min.js":"1.3.1",
-					"revolution.extensions.layeranimation.min.js":"3.6.4", 
-					"revolution.extensions.navigation.min.js":"1.3.3", 
-					"revolution.extensions.parallax.min.js":"2.2.0",  
-					"revolution.extensions.slideanims.min.js":"1.7", 
-					"revolution.extensions.video.min.js":"2.2.0"  
+					"revolution.extensions.layeranimation.min.js":"3.6.5", 
+					"revolution.extensions.navigation.min.js":"1.3.5", 
+					"revolution.extensions.parallax.min.js":"2.2.3",  
+					"revolution.extensions.slideanims.min.js":"1.8", 
+					"revolution.extensions.video.min.js":"2.2.2"  
 				   };
 
 	jQuery.fn.extend({
@@ -755,8 +755,10 @@ jQuery.extend(true, _R, {
 		Jason / Safari 11 Video autoplay fix
 	*/
 	isSafari11: function() {
-
-		return jQuery.trim(_R.get_browser().toLowerCase()) === 'safari' && parseFloat(_R.get_browser_version()) >= 11;
+		
+		var browser = jQuery.trim(_R.get_browser().toLowerCase());
+		if(jQuery.trim(navigator.userAgent.toLowerCase()).search('edge') !== -1 || browser === 'msie') return false;
+		return browser.match(/safari|chrome/);
 		
 	},
 
@@ -1572,8 +1574,13 @@ var initSlider = function (container,opt) {
 
 		//PREPARING FADE IN/OUT PARALLAX 
 		if (opt.scrolleffect.on) 
-			opt.scrolleffect.layers = new Array();			
+			opt.scrolleffect.layers = new Array();		
 		
+		//WRAP LAYERS INTO 1 CONTAINER TO AVOID FURTHER ISSUES
+		/*container.find('.tp-revslider-slidesli').each(function() {
+			jQuery(this).find('.tp-caption').wrapAll('<div class="tp-layers-container"></div>');
+		});*/
+
 		container.find('.tp-caption, .rs-background-video-layer').each(function(i) {
 			var _nc = jQuery(this),
 				_ = _nc.data(),
@@ -1777,6 +1784,7 @@ var initSlider = function (container,opt) {
 		// SET ALL LI AN INDEX AND INIT LAZY LOADING
 		opt.allli.each(function(i) {
 			var li = jQuery(this);
+			punchgs.TweenLite.set(this,{perspective:6000}); //PERSPECTIVE
 			opt.rowzones[i] = [];
 			li.find('.rev_row_zone').each(function() {
 				opt.rowzones[i].push(jQuery(this));

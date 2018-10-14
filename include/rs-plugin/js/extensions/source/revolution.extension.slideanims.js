@@ -1,5 +1,5 @@
 /************************************************
- * REVOLUTION 5.4.6.4 EXTENSION - SLIDE ANIMATIONS
+ * REVOLUTION 5.4.6.5 EXTENSION - SLIDE ANIMATIONS
  * @version: 1.8 (17.05.2017)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
@@ -378,7 +378,7 @@ var getSliderTransitionParameters = function(container,comingtransition,nextsh,s
 
 
 
-	function findTransition() {
+function findTransition() {
 		// FIND THE RIGHT TRANSITION PARAMETERS HERE
 		jQuery.each(transitionsArray,function(inde,trans) {
 			if (trans[0] == comingtransition || trans[8] == comingtransition) {
@@ -407,6 +407,53 @@ var getSliderTransitionParameters = function(container,comingtransition,nextsh,s
 
 
 }
+
+function moveCircles(cont,ms,_nt,dir,ei) {
+			var slot = cont.find('.slot'),			
+				pieces = 6,
+				sizearray = [2,1.2,0.9,0.7,0.55,0.42],				
+				sw = cont.width(),
+				sh = cont.height(),
+				di = sh>sw ? (sw*2) / pieces : (sh*2) / pieces;
+			slot.wrap('<div class="slot-circle-wrapper" style="overflow:hidden;position:absolute;border:1px solid #fff"></div>');
+			
+			for (var i=0; i<pieces;i++) slot.parent().clone(false).appendTo(nextsh);	
+
+			cont.find('.slot-circle-wrapper').each(function(i) {
+				if (i<pieces) {
+					var t = jQuery(this),
+						s = t.find('.slot'),						
+
+						nh = sw>sh ? sizearray[i]*sw : sizearray[i]*sh,
+						nw =  nh,
+						
+						nl = 0 + (nw/2 - sw/2),
+						nt = 0 + (nh/2 - sh/2),
+						br = i!=0 ? "50%" : "0",						
+						
+						ftop = _nt == 31 ? sh/2 - nh/2 : _nt == 32 ? sh/2 - nh/2 : sh/2 - nh/2,
+						fleft = _nt == 33 ? sw/2 - nw/2 : _nt == 34 ? sw - nw : sw/2 - nw/2,											
+						fa = {scale:1,transformOrigo:"50% 50%",width:nw+"px",height:nh+"px",top:ftop+"px",left:fleft+"px",borderRadius:br},
+						ta = {scale:1,top:sh/2 - nh/2,left:sw/2 - nw/2,ease:ei},
+						
+						fftop = _nt == 31 ? nt : _nt == 32 ? nt : nt,
+						ffleft = _nt == 33 ? nl : _nt == 34 ? nl+(sw/2) : nl,
+						fb = {width:sw,height:sh,autoAlpha:1,top:fftop+"px",position:"absolute",left:ffleft+"px"},
+						tb = {top:nt+"px",left:nl+"px",ease:ei},
+						
+						speed = ms,
+						delay = 0;
+						
+					
+									
+					
+					mtl.add(punchgs.TweenLite.fromTo(t,speed,fa,ta),delay);
+					mtl.add(punchgs.TweenLite.fromTo(s,speed,fb,tb),delay);				
+					mtl.add(punchgs.TweenLite.fromTo(t,0.001,{autoAlpha:0},{autoAlpha:1}),0);
+				}
+			})				
+		}
+
 
 
 /*************************************
@@ -844,58 +891,14 @@ var animateSlideIntern = function(nexttrans, comingtransition, container, nextli
 			fy = _nt == 31 ? "+100%" : _nt == 32 ? "-100%" : "0%",
 			fx = _nt == 33 ? "+100%" : _nt == 34 ? "-100%" : "0%",
 			ty = _nt == 31 ? "-100%" : _nt == 32 ? "+100%" : "0%",
-			tx = _nt == 33 ? "-100%" : _nt == 34 ? "+100%" : "0%",
+			tx = _nt == 33 ? "-100%" : _nt == 34 ? "+100%" : "0%";
 		
 				
 		mtl.add(punchgs.TweenLite.fromTo(actsh,ms-(ms*0.2),{y:0,x:0},{y:ty,x:tx,ease:eo}),ms*0.2);
 		mtl.add(punchgs.TweenLite.fromTo(nextsh,ms,{y:fy, x:fx},{y:"0%",x:"0%",ease:ei}),0);
 		//mtl.add(punchgs.TweenLite.set(nextsh.find('.defaultimg'),{autoAlpha:0}),0);border:1px solid #fff
 
-		function moveCircles(cont,ms,_nt,dir,ei) {
-			var slot = cont.find('.slot'),			
-				pieces = 6,
-				sizearray = [2,1.2,0.9,0.7,0.55,0.42],				
-				sw = cont.width(),
-				sh = cont.height(),
-				di = sh>sw ? (sw*2) / pieces : (sh*2) / pieces;
-			slot.wrap('<div class="slot-circle-wrapper" style="overflow:hidden;position:absolute;border:1px solid #fff"></div>');
-			
-			for (var i=0; i<pieces;i++) slot.parent().clone(false).appendTo(nextsh);	
-
-			cont.find('.slot-circle-wrapper').each(function(i) {
-				if (i<pieces) {
-					var t = jQuery(this),
-						s = t.find('.slot'),						
-
-						nh = sw>sh ? sizearray[i]*sw : sizearray[i]*sh,
-						nw =  nh,
-						
-						nl = 0 + (nw/2 - sw/2),
-						nt = 0 + (nh/2 - sh/2),
-						br = i!=0 ? "50%" : "0",						
-						
-						ftop = _nt == 31 ? sh/2 - nh/2 : _nt == 32 ? sh/2 - nh/2 : sh/2 - nh/2,
-						fleft = _nt == 33 ? sw/2 - nw/2 : _nt == 34 ? sw - nw : sw/2 - nw/2,											
-						fa = {scale:1,transformOrigo:"50% 50%",width:nw+"px",height:nh+"px",top:ftop+"px",left:fleft+"px",borderRadius:br},
-						ta = {scale:1,top:sh/2 - nh/2,left:sw/2 - nw/2,ease:ei},
-						
-						fftop = _nt == 31 ? nt : _nt == 32 ? nt : nt,
-						ffleft = _nt == 33 ? nl : _nt == 34 ? nl+(sw/2) : nl,
-						fb = {width:sw,height:sh,autoAlpha:1,top:fftop+"px",position:"absolute",left:ffleft+"px"},
-						tb = {top:nt+"px",left:nl+"px",ease:ei},
-						
-						speed = ms,
-						delay = 0;
-						
-					
-									
-					
-					mtl.add(punchgs.TweenLite.fromTo(t,speed,fa,ta),delay);
-					mtl.add(punchgs.TweenLite.fromTo(s,speed,fb,tb),delay);				
-					mtl.add(punchgs.TweenLite.fromTo(t,0.001,{autoAlpha:0},{autoAlpha:1}),0);
-				}
-			})				
-		}
+		
 
 		nextsh.find('.slot').remove();
 		nextsh.find('.defaultimg').clone().appendTo(nextsh).addClass("slot");
