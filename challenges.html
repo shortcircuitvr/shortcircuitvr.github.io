@@ -141,7 +141,8 @@
                                         
                                 <div class="col-13">
                                     <div class="list-group" id="list-tab" role="tablist">
-                                        <a class="list-group-item list-group-item-action active" id="list-ch1-list" data-toggle="list" href="#list-ch1" role="tab" aria-controls="ch1">Challenge 1 
+                                        <a class="list-group-item list-group-item-action active" id="list-intro-list" data-toggle="list" href="#list-intro" role="tab" aria-controls="intro">Introduction 
+                                        <a class="list-group-item list-group-item-action" id="list-ch1-list" data-toggle="list" href="#list-ch1" role="tab" aria-controls="ch1">Challenge 1 
                                             <small class="text-white-50 uppercase t500"><br>Breadboard &amp; <br>Closed Circuit</small></a>
                                         <a class="list-group-item list-group-item-action" id="list-ch2-list" data-toggle="list" href="#list-ch2" role="tab" aria-controls="ch2">Challenge 2
                                             <small class="text-white-50 uppercase t500"><br>LED</small></a>     
@@ -174,8 +175,34 @@
 							
 							<div class="col-12">
 								<div class="tab-content" id="nav-tabContent">
+                                    <!-- Introduction -->
+                                    <div class="tab-pane fade show active" id="list-intro" role="tabpanel" aria-labelledby="list-intro-list">
+                                        
+										<h2>Introduction</h2>
+                                        
+                                        <h4>What is electricity?</h4>
+                                        <h4>What are conductors?</h4>
+                                        <h4>What do electrons do?</h4>
+                                        <h4>What is a power source?</h4>
+                                        <p>You need a power source to ...</p>
+                                        <div id="portfolio" class="portfolio portfolio-1 clearfix">
+                                            <article class="portfolio-item clearfix">
+                                                <div class="portfolio-image max-350">    
+                                                    <figure class="figure">
+                                                        <img src="images/extra-info/extra-info-ch-1-source-small.jpg" class="figure-img img-fluid" alt="challenge 1">
+                                                        <figcaption class="figure-caption">Symbol of a power source.<br>(in this case a battery with different voltages)</figcaption>
+                                                    </figure>
+                                                    
+                                                    <div class="i-overlay on-hover" style="background: rgba(255,255,255,0.4);">
+                                                        <a href="images/extra-info/extra-info-ch-1-source-full.jpg" data-lightbox="image"><i class="icon-line-zoom-in" ></i></a>
+                                                    </div>
+                                                </div>
+                                            </article>     
+                                        </div>
+                                        
+                                    </div>
                                     <!-- Challenge 1 -->
-									<div class="tab-pane fade show active" id="list-ch1" role="tabpanel" aria-labelledby="list-ch1-list">
+									<div class="tab-pane fade" id="list-ch1" role="tabpanel" aria-labelledby="list-ch1-list">
                                         <h2>Challenge 1: Breadboard &amp; Closed Circuit</h2>
                                         <p>The first challenge is more of an introduction to the breadboard and the idea of a closed circuit.</p>
 
@@ -195,30 +222,15 @@
                                         </div>
                                         <div class="line"></div>
                                         
-                                        <h4>What is electricity?</h4>
-                                        <h4>What is a power source?</h4>
-                                        <p>You need a power source to ...</p>
-                                        <div id="portfolio" class="portfolio portfolio-1 clearfix">
-                                            <article class="portfolio-item clearfix">
-                                                <div class="portfolio-image max-350">    
-                                                    <figure class="figure">
-                                                        <img src="images/extra-info/extra-info-ch-1-source-small.jpg" class="figure-img img-fluid" alt="challenge 1">
-                                                        <figcaption class="figure-caption">Symbol of a power source.<br>(in this case a battery with different voltages)</figcaption>
-                                                    </figure>
-                                                    
-                                                    <div class="i-overlay on-hover" style="background: rgba(255,255,255,0.4);">
-                                                        <a href="images/extra-info/extra-info-ch-1-source-full.jpg" data-lightbox="image"><i class="icon-line-zoom-in" ></i></a>
-                                                    </div>
-                                                </div>
-                                            </article>     
-                                        </div>
-                                        <h4>Why do I need to use wires?</h4>
+                                        
+                                        <h4>Why do I need to use jump wires?</h4>
+                                        <p>Wires are conductors and that's why electrons can be transported from one end of the wire to the other. In this way electrons will reach the electrical components that are connected to the other end of the wire and energy will be converted into another form such as light, heat or movement.</p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image max-250">    
                                                     <figure class="figure">
                                                         <img src="images/components/wire-small.jpg" class="figure-img img-fluid" alt="challenge 1">
-                                                        <figcaption class="figure-caption">Red wire to connect components.</figcaption>
+                                                        <figcaption class="figure-caption">Red wire to transport electrons to the connected electrical component.</figcaption>
                                                     </figure>
                                                     
                                                     <div class="i-overlay on-hover" style="background: rgba(255,255,255,0.4);">
@@ -277,7 +289,11 @@
                                             </article>     
                                         </div>
                                         <h4>What is a short circuit and how to avoid it?</h4>
-                                        <p>But just connecting two power source terminals together will create a too high current and may end up breaking or even burning something. This is called a short circuit and must be avoided at all times. To restrict the current from flowing this much we can use a resistor. Resistors come in many different values. The higher the value the more it will restrict the current.</p>
+                                        <p>But just connecting two power source terminals together will create a too high current and may end up breaking or even burning something. This is called a short circuit and must be avoided at all times. To restrict the current from flowing this much we can use a resistor.</p>
+                                        <small>diagram short circuit</small>
+                                        
+                                        <h4>What is a resistor?</h4>
+                                        <p>The resistor is a passive electrical component that can be used to restrict the flow of an electric current. It can be found in a lot of electronic circuits. The resistance is measured in ohms.</p><p>Resistors come in many different values. The higher the value, the more it will restrict the current.</p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image max-250">    
@@ -292,6 +308,9 @@
                                                 </div>
                                             </article>     
                                         </div>
+                                        
+                                        <h4>How to decode a resistor?</h4>
+                                        <small>image resistor colors</small>
                                         <div class="toggle toggle-bg">
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec">
