@@ -175,16 +175,35 @@
 							
 							<div class="col-12">
 								<div class="tab-content" id="nav-tabContent">
+                                    
                                     <!-- Introduction -->
                                     <div class="tab-pane fade show active" id="list-intro" role="tabpanel" aria-labelledby="list-intro-list">
                                         
 										<h2>Introduction</h2>
                                         
                                         <h4>What is electricity?</h4>
+                                        <p>
+                                        Electricity or electric current is the movement of small electrically charged particles in the same direction. These particles are also known as electrons.
+                                        </p>
                                         <h4>What are conductors?</h4>
+                                        <p>
+                                        Conductors are materials (commonly metals) which act as a medium where electricity can flow through. It is basically a path to transport electrons from one side of the conductor to the other.
+                                        </p>
+                                        <small>Add image of multiple jumper wires</small>
                                         <h4>What do electrons do?</h4>
+                                        <p>
+                                        While electrons are traveling through a conductor, they are transporting energy from one side of the conductor to the other.
+                                        This transported energy can be transformed into another form of energy such as light, heat or motion by different electronic components such as a LED or DC Motor.
+                                        </p>
                                         <h4>What is a power source?</h4>
-                                        <p>You need a power source to ...</p>
+                                        <p>
+                                        A power source is a source of electrical energy such as a battery or electric generators. 
+                                        You need a power source to start moving the electrons through the conductors. Once the electrons arrive at the electrical components, the transported energy will be absorbed by the electrical component and this component will use the energy to turn it into another form of energy such as light in a LED or motion when the component is a motor.
+
+                                        In Short Circuit VR, you can only use batteries of different voltages for now.(1.5V, 3V and 9V)
+                                        </p>
+                                        <small>Add image of batteries and power supply</small>
+                                        <br>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image max-350">    
@@ -199,7 +218,27 @@
                                                 </div>
                                             </article>     
                                         </div>
+                                        <h4>How to build a circuit?</h4>
                                         
+                                        <p>
+                                        We’ll start with a very simple circuit: a power source connected to a resistor. 
+                                        The value of the resistor and battery doesn’t matter for now, so we’ll be using one with 1000 ohm and a battery of 9V as an example.
+                                        </p>                                       
+                                        <p>
+                                        Connect the red wire to one end of the resistor and the black wire to the other. The wires are conductors and so these are the paths for the electrons to flow through. Now the battery is connected to the resistor and you have built a complete circuit!
+                                        </p>
+                                        <small>Add image with real components and scvr components (without breadboard)</small>
+                                        
+                                        <h4>How to test circuits in Short Circuit VR?</h4>
+                                        
+                                        <p>
+                                        If you want to test this in Short Circuit VR, you’ll first have to press the ‘play mode’ to start the electric current. We did this so that it’s more clearly for the player to see when the current is flowing and when it’s not. So don’t forget to get out of the ‘edit mode’ and switch to ‘play mode’ when testing out your circuits!
+                                        </p>
+                                        <small>Add ‘edit’ and ‘play’ mode difference image</small>
+                                        
+                                       
+                                        
+
                                     </div>
                                     <!-- Challenge 1 -->
 									<div class="tab-pane fade" id="list-ch1" role="tabpanel" aria-labelledby="list-ch1-list">
@@ -223,24 +262,18 @@
                                         <div class="line"></div>
                                         
                                         
-                                        <h4>Why do I need to use jump wires?</h4>
-                                        <p>Wires are conductors and that's why electrons can be transported from one end of the wire to the other. In this way electrons will reach the electrical components that are connected to the other end of the wire and energy will be converted into another form such as light, heat or movement.</p>
-                                        <div id="portfolio" class="portfolio portfolio-1 clearfix">
-                                            <article class="portfolio-item clearfix">
-                                                <div class="portfolio-image max-250">    
-                                                    <figure class="figure">
-                                                        <img src="images/components/wire-small.jpg" class="figure-img img-fluid" alt="challenge 1">
-                                                        <figcaption class="figure-caption">Red wire to transport electrons to the connected electrical component.</figcaption>
-                                                    </figure>
-                                                    
-                                                    <div class="i-overlay on-hover" style="background: rgba(255,255,255,0.4);">
-                                                        <a href="images/components/wire-full.jpg" data-lightbox="image"><i class="icon-line-zoom-in" ></i></a>
-                                                    </div>
-                                                </div>
-                                            </article>     
-                                        </div>
+                                        
                                         <h4>What is a breadboard?</h4>
-										<p>A breadboard is a board with a bunch of holes (terminals) connected internally in a certain way which makes connecting components or wires together very simple. The breadboard used in Short Circuit VR has two horizontal strips of terminals at the top and at the bottom as well. Each terminal in a horizontal strip is internally connected with the other terminals in that strip. Besides the horizontal strips you’ve got two blocks of 30 vertical strips, each made of 5 terminals. Again each terminal in a strip is connected with all the other terminals in that strip.</p>
+										<p>A breadboard is a small plastic  board with a lot of holes (terminals) into which you can push components or wires. Under the surface of the breadboard are metal strips (conductors) that connect groups of holes internally. 
+                                        </p>
+                                        <p>
+                                        The purpose of a breadboard is to make connecting components and wires easier and more organised, without having to solder the components together first. This is why the breadboard is often referred to as a solderless breadboard or prototyping board.
+                                        </p>
+                                        <small>image of real breadboard and breadboard in scvr</small>
+                                        <h4>How is the breadboard connected internally?</h4>
+                                        <p>
+                                        The breadboard used in Short Circuit VR has two horizontal strips of terminals at the top and at the bottom as well. Each terminal in a horizontal strip is internally connected with the other terminals in that strip. Besides the horizontal strips you’ve got two blocks of 30 vertical strips, each made of 5 terminals. Again each terminal in a strip is connected with all the other terminals in that strip.
+                                        </p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image">    
@@ -271,8 +304,26 @@
                                                 </div>
                                             </article>     
                                         </div>
+                                        
+                                        <h4>Why do I need to use jump wires?</h4>
+                                        <p>Wires are conductors and that's why electrons can be transported from one end of the wire to the other. In this way electrons will reach the electrical components that are connected to the other end of the wire and energy will be converted into another form of energy so that you get light from a LED or rotation from a DC motor for example.</p>
+                                        <div id="portfolio" class="portfolio portfolio-1 clearfix">
+                                            <article class="portfolio-item clearfix">
+                                                <div class="portfolio-image max-250">    
+                                                    <figure class="figure">
+                                                        <img src="images/components/wire-small.jpg" class="figure-img img-fluid" alt="challenge 1">
+                                                        <figcaption class="figure-caption">Red wire to transport electrons to the connected electrical component.</figcaption>
+                                                    </figure>
+                                                    
+                                                    <div class="i-overlay on-hover" style="background: rgba(255,255,255,0.4);">
+                                                        <a href="images/components/wire-full.jpg" data-lightbox="image"><i class="icon-line-zoom-in" ></i></a>
+                                                    </div>
+                                                </div>
+                                            </article>     
+                                        </div>
+                                        
                                         <h4>What is a closed circuit?</h4>
-                                        <p>For electricity to flow you’ll need a closed circuit as electrons (conventionally!) flow from the positive terminal of the power source to the negative terminal of the power source.</p>
+                                        <p>A closed circuit can be considered a closed path connecting both terminals of a power source. For electricity to flow you’ll need a closed circuit as electrons (conventionally!) flow from the positive terminal of the power source to the negative terminal of the power source.</p>
                                         <small>diagram: indicate flow of electrons on ch1 diagram.</small>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
@@ -288,9 +339,16 @@
                                                 </div>
                                             </article>     
                                         </div>
+                                        
+                                        <h4>What is an open circuit?</h4>
+                                        <p>
+                                        You have an open circuit when there’s an opening anywhere in your path, interrupting the current from flowing between the terminals of the power source. This way electrons are not able to reach other components or the power source and as a result, the electric current stops flowing. 
+                                        </p>
+                                        <small>Add diagram with closed and open circuit</small>
+                                        
                                         <h4>What is a short circuit and how to avoid it?</h4>
-                                        <p>But just connecting two power source terminals together will create a too high current and may end up breaking or even burning something. This is called a short circuit and must be avoided at all times. To restrict the current from flowing this much we can use a resistor.</p>
-                                        <small>diagram short circuit</small>
+                                        <p>While we need a closed circuit, connecting both terminals of a power source directly will cause too much current to flow and may end up breaking or even burning something. This is called a short circuit and must be avoided at all times. To restrict the current from flowing this much, we can use a resistor.
+                                        </p>
                                         
                                         <h4>What is a resistor?</h4>
                                         <p>The resistor is a passive electrical component that can be used to restrict the flow of an electric current. It can be found in a lot of electronic circuits. The resistance is measured in ohms.</p><p>Resistors come in many different values. The higher the value, the more it will restrict the current.</p>
