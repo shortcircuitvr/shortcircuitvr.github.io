@@ -574,7 +574,7 @@
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec">
                                                 <h4>Solution Challenge 3</h4>
-                                                <p>solution</p>
+                                                <p>To complete this challenge, you will need to place a LED in the breadboard, connect a resistor (min. 360Ω when using a 9V battery) to the anode side of the LED and connect an outer terminal of the slide switch to the cathode side. Close the circuit by connecting the other end of the resistor to the positive terminal of the battery and by connecting the center terminal of the slide switch to the negative terminal.</p>
                                                 <div id="portfolio" class="portfolio portfolio-1 clearfix" >
                                                     <article class="portfolio-item clearfix">
                                                         <div class="portfolio-image">    
@@ -696,7 +696,7 @@
                                         
  
                                         <h4>What is a potentiometer?</h4>
-                                        <p>A potentiometer is basically two resistors which values change as you turn the wheel. When you turn the wheel one direction one resistor will reduce in resistance while the other increases in resistance.</p>
+                                        <p>A potentiometer is a component that allows you to control the resistance in the circuit. This component is basically two resistors of which you can change the value by turning the knob on the potentiometer. When you turn the knob in one direction, one resistor will reduce in resistance while the other increases in resistance.</p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image max-250">    
@@ -713,7 +713,8 @@
                                         </div>
                                         
                                         <h4>How do I use a potentiometer?</h4>
-                                        <p>The three terminal on the potentiometer are as follows: the outer terminals are each connected to an end of one of the two resistors and the middle terminal is connected at the middle where both resistors are connected. </p>
+                                        <p>The potentiometer has three terminals. The outer terminals are each connected to an end of one of the two (internal) resistors and the center terminal is connected at the middle where both resistors are connected as well. Just like with the slide switch, it is not necessary to use all 3 terminals as you often only need to use two: an outer pin and the center pin. Connecting this in a circuit and by turning the knob, the current will increase/decrease depending on which direction you turn.</p>
+                                        
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image">    
@@ -729,13 +730,15 @@
                                             </article>     
                                         </div>
                                         
-                                        <p>So just like by the slide switch you only need to use two terminals; an outer pin and the center pin. Connecting this in a loop will change the increase/decrease the current flow when turning on the wheel. Connecting this with led enables us to increase and decrease the the brightness accordingly.
+                                        <p>
+                                        For example when you use a potentiometer of 5kΩ, the total resistance between the two outer terminals is 5kΩ. When you turn the knob so that the resistance between terminal one and two is 1kΩ, then that means the resistance between terminal two and three is 4kΩ. 
                                         </p>
+                                    
                                         <div class="toggle toggle-bg">
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec">
                                             <h4>Solution Challenge 5</h4>
-                                                <p>solution</p>
+                                                <p>Put the potentiometer in the breadboard and connect the LED to one of the outer terminals of the potentiometer. Then make sure the anode side of the LED is connected to the positive side of the battery and the center terminal of the potentiometer connected to the negative side of the battery to close the circuit.</p>
                                                 <div id="portfolio" class="portfolio portfolio-1 clearfix" >
                                                     <article class="portfolio-item clearfix">
                                                         <div class="portfolio-image">    
@@ -757,7 +760,7 @@
                                     <!-- Challenge 6 -->
                                     <div class="tab-pane fade" id="list-ch6" role="tabpanel" aria-labelledby="list-ch6-list">
 										<h2>Challenge 6: 7 Segment Display</h2>
-                                        <p>Challenge 6 brings in a new component: the seven segment display. A name which may be a little confusing as it actually has 8 displays if you include the point at the bottom right corner.</p>
+                                        <p>Challenge 6 brings in a new component: the 7 segment display. A name which may be a little confusing as it actually has 8 displays if you include the decimal point at the bottom right corner.</p>
                                         
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
@@ -776,13 +779,13 @@
                                         <div class="line"></div>
                                         
                                         <h4>What is a 7 segment display?</h4>
-                                        <p>Basically all the 7 segment display really is, is a bunch of leds internally. The specific 7 segment display used in Short Circuit VR is a common cathode, which means that each cathode of the 8 leds is connected internally to the center pins at the top and at the bottom. So all the other pins are just the anodes of each led. See the diagram to know which anode belongs to which segment exactly.</p>
+                                        <p>The 7 segment display is a component made out of several LEDs internally. The 7 segment display used specifically in Short Circuit VR is a common cathode display, which means that each cathode of the 8 LEDs is connected internally to the center pins at the top and bottom of the display. So all the other pins are the anodes of each LED. Look at the diagram below to know which anode belongs to which segment exactly.</p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image max-250">    
                                                     <figure class="figure">
                                                         <img src="images/components/7segment-small.jpg" class="figure-img img-fluid" alt="challenge 5">
-                                                        <figcaption class="figure-caption">7 segment display (cathode).</figcaption>
+                                                        <figcaption class="figure-caption">7 segment display in Short Circuit VR (common cathode).</figcaption>
                                                     </figure>
                                                     
                                                     <div class="i-overlay on-hover" style="background: rgba(255,255,255,0.4);">
@@ -793,7 +796,7 @@
                                         </div>
                                         
                                         <h4>How do I use a 7 segment display?</h4>
-                                        <p>Connecting either one of the center pins to the negative terminal of the power source is sufficient as they’re both internally connected anyway. As the segments are leds, each one connected still needs a resistor to go before it. To finish this challenge successfully you can pick any anode to connect (with a resistor) to the positive terminal of the battery and connect the common cathode to the negative terminal.
+                                        <p>Connecting either one of the center pins (top or bottom) to the negative terminal of the power source is sufficient as they’re both internally connected anyway. Because the segments are LEDs, each one still needs to be connected to a resistor to prevent the LED from getting too much current through it.
                                         </p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
@@ -814,7 +817,8 @@
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec">
                                                 <h4>Solution Challenge 6</h4>
-                                                <p>solution</p>
+                                                <p>To finish this challenge successfully, you must connect one of the common cathode pins of the display to the negative terminal of the battery. Then you can pick any of the anode terminals and connect it, not forgetting to use a resistor (at least 360Ω with a 9V battery), to the positive side of the battery.
+                                                </p>
                                                 <div id="portfolio" class="portfolio portfolio-1 clearfix" >
                                                     <article class="portfolio-item clearfix">
                                                         <div class="portfolio-image">    
@@ -835,7 +839,7 @@
                                     <!-- Challenge 7 -->
                                     <div class="tab-pane fade" id="list-ch7" role="tabpanel" aria-labelledby="list-ch7-list">
 										<h2>Challenge 7: 7 Segment Display (4)</h2>
-                                        <p>Challenge 7 is easy if you’ve understood challenge 6. Instead of connecting only one anode, you need to connect several more (4 leds to be exact) to make the 4 shape on the 7 segment display. Remember that each connected anode needs a resistor in front of it. 
+                                        <p>Challenge 7 is easy if you’ve understood challenge 6. Instead of connecting only one anode, you need to connect several more (4 leds to be exact) to make the 4 shape on the 7 segment display. Remember that each connected anode needs to be in series with a resistor.
                                         </p>
                                                                                 
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
@@ -873,7 +877,7 @@
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec">
                                                 <h4>Solution Challenge 7</h4>
-                                                <p>solution</p>
+                                                <p>Push the 7 segment display into the breadboard and connect one of the cathode pins to the negative side of the battery. Spawn 4 resistors (min. 360Ω with a 9V battery) and connect each resistor to one of the following segments: f, g, b and c. Then connect the other end of the resistors to the positive side of the battery.</p>
                                                 <div id="portfolio" class="portfolio portfolio-1 clearfix" >
                                                     <article class="portfolio-item clearfix">
                                                         <div class="portfolio-image">    
@@ -913,7 +917,7 @@
                                         <div class="line"></div>
                                         
                                         <h4>What is a buzzer?</h4>
-                                        <p>Buzzers are electronic component which make a noise at a specific frequency. There are several buzzers in the components menu to give you the option to pick a buzzer with a certain frequency of your liking.</p>
+                                        <p>A buzzer is an electronic component that makes a buzzing noise at a specific frequency. There are several buzzers in the components menu to give you the option to pick a buzzer with a certain frequency of your liking.</p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image max-250">    
@@ -930,13 +934,14 @@
                                         </div>
                                         
                                         <h4>How do I use a buzzer?</h4>
-                                        <p>A buzzer does have a polarity, much like a diode. Connecting it in wrongly can destroy a buzzer. Luckily you are allowed to make mistakes in Short Circuit VR, but this challenge isn’t too hard as the wires of the buzzer indicate quite clearly which end needs to be connected to which terminal of the power source. </p>
+                                        <p>A buzzer does have a polarity, much like a diode. Connecting it wrongly in the circuit can destroy a buzzer. Luckily you are allowed to make mistakes in Short Circuit VR, but this challenge isn’t too hard as the colors of the wires of the buzzer indicate quite clearly which end needs to be connected to which terminal of the power source.
+                                        </p>
                                         
                                         <div class="toggle toggle-bg">
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec">
                                                 <h4>Solution Challenge 8</h4>
-                                                <p>solution</p>
+                                                <p>Spawn one of the buzzers from the components menu and connect the red wire to the positive terminal of the battery and the black to the negative terminal. </p>
                                                 <div id="portfolio" class="portfolio portfolio-1 clearfix" >
                                                     <article class="portfolio-item clearfix">
                                                         <div class="portfolio-image">    
@@ -958,7 +963,7 @@
                                     <!-- Challenge 9 -->
                                     <div class="tab-pane fade" id="list-ch9" role="tabpanel" aria-labelledby="list-ch9-list">
 										<h2>Challenge 9: DC Motor</h2>
-                                        <p>In this challenge, we get to work with a DC motor and a potentiometer. The potentiometer has to be connected in a similar way as in Challenge 5, but instead of dimming a LED we will be controlling the speed of the motor.</p>
+                                        <p>In this challenge, we get to work with a DC motor and a potentiometer. The potentiometer has to be connected in a similar way as in Challenge 5, but instead of dimming a LED, we will be controlling the speed of the motor.</p>
                                         
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
@@ -977,7 +982,7 @@
                                         <div class="line"></div>
                                         
                                         <h4>What is a DC motor?</h4>
-                                        <p>A DC motor is a fun little component which turns depending on how much current is flowing through it. Once turning you can hover with your controller over it to see the rotations per minute. A DC motor can be connected both ways but depending on the polarity the motor will turn one way or the other.</p>
+                                        <p>A DC motor is a component where the shaft rotates at a speed which depends on how much current is flowing through it. Once the shaft is rotating, you can hover with your controller over it to see the rotations per minute. A DC motor can be connected both ways but depending on the polarity the motor will turn one way or the other.</p>
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
                                                 <div class="portfolio-image max-250">    
@@ -994,13 +999,18 @@
                                         </div>
                                         
                                         <h4>How do I use a DC motor?</h4>
-                                        <p>To get started you will have to spawn wires out of the components menu and then attach one end of each wire to a terminal of the motor as the terminals of the motor do not snap into the breadboard directly. Once you’ve connected everything as shown in the diagram you’ll be able to turn the potentiometer and slow down or speed up the motor. You can attach an object to the tip of the motor to watch it turn more clearly. 
+                                        <p>A DC motor has 2 terminals but it does not matter which side of the power source is connected to which terminal. The motor can be connected both ways but depending on the polarity, the motor will turn one way or the other. When you've connected the motor, you can attach an object to the tip(shaft) of the motor to watch it spin. 
                                         </p>
+                                        
                                         <div class="toggle toggle-bg">
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
                                             <div class="togglec">
                                                 <h4>Solution Challenge 9</h4>
-                                                <p>solution</p>
+                                                <p>To get started, you will have to spawn wires and then attach one end of each wire to a terminal of the motor, because the terminals do not snap into the breadboard directly. Then place the potentiometer in the breadboard and use one of the wires of the motor to connect to the center pin of the potentiometer. Close the circuit by connecting the other wire of the motor to the negative side of the battery and one of the outer pins of the potentiometer to the positive side.
+                                                </p>
+                                                <p>
+                                                Once you’ve connected everything as shown in the diagram, you’ll be able to turn the potentiometer and slow down or speed up the motor. You can attach an object to the tip(shaft) of the motor to watch it turn more clearly.
+                                                </p>
                                                 <div id="portfolio" class="portfolio portfolio-1 clearfix" >
                                                     <article class="portfolio-item clearfix">
                                                         <div class="portfolio-image">    
