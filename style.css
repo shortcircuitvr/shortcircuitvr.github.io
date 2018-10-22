@@ -247,6 +247,9 @@ form { margin-bottom: 30px; }
 
 small { font-family: 'Lato', sans-serif; }
 
+h4.solution-title{
+    margin-top: 35px;
+}
 
 /* ----------------------------------------------------------------
 	Helper Classes
