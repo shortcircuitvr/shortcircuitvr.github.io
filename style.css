@@ -8788,7 +8788,7 @@ body:not(.device-touch) .social-icon i {
 
 /* Steam Button */
 .steam-button { 
-    background-image: url(images/steam-button-border.png) !important;
+    background-image: url(images/steam-logo-button.jpg) !important;
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: contain;
@@ -8800,7 +8800,7 @@ body:not(.device-touch) .social-icon i {
 }
 
 .steam-button:hover {
-    background-image: url(images/steam-button-overlay.png) !important;
+    background-image: url(images/steam-logo-button-overlay.jpg) !important;
 }
 
 
