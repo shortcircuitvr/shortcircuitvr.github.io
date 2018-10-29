@@ -55,16 +55,6 @@
 	============================================= -->
 	<title>Short Circuit VR | Electronics Lab Simulator</title>
 
-    <style>
-
-		
-
-		.tp-video-play-button { display: none !important; }
-
-		.tp-caption { white-space: nowrap; }
-
-	</style>
-    
 </head>
 
 <body class="stretched" data-loader="5" data-loader-color="#f16c20">
@@ -563,20 +553,7 @@
 	<script src="js/functions.js"></script>
 
 	<script>
-		$('#ytb-video').on('click', function(e){
-			e.preventDefault();
-
-			if( $(this).hasClass('video-played') ) {
-				$('#ytb-video').YTPPause();
-			} else {
-				$('#ytb-video').YTPPlay();
-				$('.ytb-poster').stop(true,true).fadeTo( "slow", 0 );
-			}
-
-			$(this).toggleClass('video-played');
-		});
-
-
+		<!-- Game Feature Showcase -->
 		function showcaseSection( element ){
 
 			var otherElements = element.parents('.showcase-section').find('.showcase-feature'),
