@@ -232,14 +232,30 @@
                                             </article>     
                                         </div>
                                         
+                                        <div id="portfolio" class="portfolio portfolio-1 clearfix">
+                                            <article class="portfolio-item clearfix">
+                                                <div class="portfolio-image max-350">    
+                                                    <figure class="figure">
+                                                        <img src="images/extra-info/extra-info-ch-1-source-small.jpg" class="figure-img img-fluid" alt="symbol of a power source">
+                                                        <figcaption class="figure-caption">Electronic symbol of a power source with the long line as the positive side and the short line the negative side.</figcaption>
+                                                    </figure>
+                                                    
+                                                    <div class="i-overlay on-hover" style="background: rgba(255,255,255,0.4);">
+                                                        <a href="images/extra-info/extra-info-ch-1-source-full.jpg" data-lightbox="image"><i class="icon-line-zoom-in" ></i></a>
+                                                    </div>
+                                                </div>
+                                            </article>     
+                                        </div>
+                                        
                                         <h4>How to build a circuit?</h4>
                                         
                                         <p>
                                         We’ll start with a very simple circuit: a power source connected to a resistor. 
-                                        The value of the resistor and battery doesn’t matter for now, so we’ll be using a random resistor and a battery of 9V as an example.
-                                        <br>
-                                        Connect the red wire of the battery to one end of the resistor and the black wire to the other end. The wires are conductors and so these are the paths for the electrons to flow through. Now the battery is connected to the resistor and you have built a complete (but pretty useless) circuit!
-                                        </p>                                       
+                                        Do not connect both terminals of a power source directly with each other (= short circuit). This will cause too much current to flow and thus destroy the power source (battery). To solve this, we will need a resistor with a high enough value to restrict the current. In this circuit you can use a 1000 ohm resistor and a battery of 9V as an example. We’ll explain in challenge 2 (LED) how to know which resistor value you need to use.
+                                        </p> 
+                                        <p>
+                                        Connect the red wire of the battery to one end of the resistor and the black wire to the other end. Using red wires for positive terminals and black wires for negative terminals (GND) is the standard way to connect a power source in electronics. The wires are conductors and so these are the paths for the electrons to flow through. Now the battery is connected to the resistor and you have built a complete (but pretty useless) circuit!
+                                        </p>
                                         
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
@@ -260,6 +276,9 @@
                                         
                                         <p>
                                         If you want to test this in Short Circuit VR, you’ll have to select ‘play mode’ after building your circuit to cause the electric current to start flowing. We did this so that it’s more clear for the player to see when the current is flowing and when it’s not. So don’t forget to get out of the ‘edit mode’ and switch to ‘play mode’ when testing out your circuits!
+                                        </p>
+                                        <p>
+                                        Keep in mind that it’s best to connect all the other electronic components first before you connect the power source in a circuit. In Short Circuit VR it’s easy to go from ‘edit’ to ‘play’ mode but with real components, the current will start flowing once you have connected the power source, so be careful!
                                         </p>
                                         
                                        <div id="portfolio" class="portfolio portfolio-1 clearfix">
@@ -376,7 +395,7 @@
                                         </div>
                                         
                                         <h4>What is a closed circuit?</h4>
-                                        <p>A closed circuit can be considered a closed path connecting both terminals of a power source. For electricity to flow you’ll need a closed circuit as electrons (conventionally!) flow from the positive terminal of the power source to the negative terminal of the power source.</p>
+                                        <p>A closed circuit can be considered a closed path connecting both terminals of a power source. For electricity to flow, you’ll need a closed circuit as electric current (conventionally!) flows from the positive terminal to the negative terminal of the power source.</p>
            
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
@@ -392,6 +411,11 @@
                                                 </div>
                                             </article>     
                                         </div>
+                                        
+                                        <h4>What is the conventional current flow?</h4>
+                                        <p>
+                                        As mentioned earlier, electric current flows from the positive terminal to the negative terminal of the power source. This is called the conventional current flow and almost all descriptions of electronic circuits will be using this direction of flow. However, keep in mind that in reality, electrons are flowing physically from the negative terminal to the positive terminal and this is known as the electron flow.
+                                        </p>
                                         
                                         <h4>What is an open circuit?</h4>
                                         <p>
@@ -419,7 +443,7 @@
                                         
                                         <h4>What is a resistor?</h4>
                                         <p>The resistor is a passive electronic component that can be used to restrict the flow of electric current. It can be found in a lot of electronic circuits. The resistance is measured in Ohm(Ω).
-                                        <br>Resistors come in many different values. The higher the value, the more it will restrict the current.
+                                        <br>Resistors come in many different values. The higher the value, the more it will restrict the current. Not all resistor values exist due to production and storage constraints. 
                                         </p>
                                         
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
@@ -443,7 +467,7 @@
                                                 <h4 class="solution-title">Solution Challenge 1</h4>
                                                 <p>To successfully finish the challenge, you can spawn any resistor out of the components menu and add it on the breadboard. Make sure both terminals of the resistor are not placed in the same strip. 
                                                 You can spawn two wires from the menu to connect each strip to the horizontal strips connected to the battery.
-                                                The colors of the wires do not matter, but we will use a red wire for the positive side of the battery and black for the negative side in the examples to make it more clear.
+                                                It is the standard way in electronics to use a red wire for the positive side of the power source and black for the negative side to make it more clear.
                                                 </p>
                                                 <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                                     <article class="portfolio-item clearfix">
@@ -523,7 +547,8 @@
                                         <p>The cathode has to be connected to the negative side of a circuit and the anode to the positive side to have it forward biased. You can recognize the anode pin on a LED by the sligthly longer length than the cathode pin.
                                         </p>
                                         <p>
-                                        Besides polarity being an important issue it is equally important to add a resistor to restrict the current. The resistor we need depends on what voltage the power source has that we will be using. A diode needs a minimum specific voltage (voltage drop) across it before it will allow current to pass through it, but too much voltage will break it. A regular LED, as in the application has a voltage drop of 1.8V and a maximum current of 20mA.
+                                        Besides polarity being an important issue, it is equally important to add a resistor to restrict the current. The resistor we need depends on what voltage the power source has that we will be using. A diode needs a minimum specific voltage (voltage drop) across it before it will allow current to pass through it.
+                                        <br>A regular LED, as in the application has a voltage drop of 1.8V and a maximum current of 20mA. If you don’t add a resistor to the circuit, the LED will break because there is too much current flowing through it.
                                         </p>
 
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix" >
@@ -882,6 +907,10 @@
                                         <p>
                                         For example when you use a potentiometer of 5kΩ, the total resistance between the two outer terminals is 5kΩ. When you turn the knob so that the resistance between terminal one and two is 1kΩ, then that means the resistance between terminal two and three is 4kΩ. 
                                         </p>
+                                        <p>
+                                        Keep in mind that if you turn the knob so that one side of the potentiometer will have a small resistance or none at all, other components connected to that side can break because of the current being too high. 
+                                        So it’s best in general to add a regular resistor as well when using a potentiometer to prevent destroying components. This challenge does not include a separate resistor so that it’s easier for you to see what happens when you increase/decrease the resistance of the potentiometer. 
+                                        </p>
                                     
                                         <div class="toggle toggle-bg">
                                             <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Toggle for the solution!</div>
@@ -1176,6 +1205,9 @@
                                     <div class="tab-pane fade" id="list-ch9" role="tabpanel" aria-labelledby="list-ch9-list">
 										<h2>Challenge 9: DC Motor</h2>
                                         <p>In this challenge, we get to work with a DC motor and a potentiometer. The potentiometer has to be connected in a similar way as in Challenge 5, but instead of dimming a LED, we will be controlling the speed of the motor.</p>
+                                        <p>
+                                        Remember that a regular potentiometer is not the best component to control the speed of a DC motor. For this you should normally use power potentiometers or some kind of transistor, but those components are not yet included in Short Circuit VR at the moment.
+                                        </p>
                                         
                                         <div id="portfolio" class="portfolio portfolio-1 clearfix">
                                             <article class="portfolio-item clearfix">
