@@ -53,7 +53,37 @@
     <!--[if lt IE 9]>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
+    
+    <!-- SLIDER REVOLUTION 5.x CSS SETTINGS (also for Mailchimp CSS)-->
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/navigation.css">
 
+    <!-- Mail Sign Up -->
+    <style>
+    #username {
+        visibility:hidden;
+        width: 0;
+        padding: 0;
+        border: 0;
+    }
+    #email{
+        height: 40px;
+        width: 300px;
+        border-radius: 5px; 
+        padding: 15px 10px; 
+        margin: 8px 0; 
+        box-sizing: border-box; 
+        border:2px solid #ccc; 
+        border-radius: 4px; 
+        font-size: 16px;
+    }
+        
+    #email:focus {
+        border: 2px solid #aaa;
+        }
+    </style>  
+    
 
 	<!-- Document Title
 	============================================= -->
@@ -116,14 +146,28 @@
 					<div class="container">
 						<div class="heading-block divcenter center" style="max-width: 600px">
 							<h2 class="capitalize t600 mb-2" style="font-size: 36px; letter-spacing: -1px">We'd love to get your feedback</h2>
-							<p>Leave a review on our Steam page or fill in the Google Forms once you've tested out or seen our game.</p>
+							<p>Leave a review on our Steam page and help us by signing up for an interview!</p>
                             <a href="https://store.steampowered.com/app/970800/Short_Circuit_VR/" target="_blank" class="button button-rounded button-shadow button-large ls0 t400 ml-0 mb-2 nott steam-button"></a>
                             <br>
-							<a href="https://docs.google.com/forms/d/1o6qfHbzs10sEFx5H3EF6PSU7py7R5eb5K0SHzLu4qhs/" target="_blank" class="button button-rounded button-shadow button-large ls0 t700 ml-0 mb-2 nott google-forms">Google Forms</a>
-						</div>
+							<a href="https://goo.gl/forms/ug5YAgNtX1dE2DK43" target="_blank" class="button button-rounded button-shadow button-large ls0 t700 ml-0 mb-2 nott google-forms">Interview Sign Up</a>
+						
 					</div>
 				</div>
             </div>
+                
+            <!-- Mail Sign Up-->
+                <div class="section noborder nomargin " style="padding: 50px 0;">
+					<div class="container">
+						<div class="heading-block divcenter center" style="max-width: 600px">
+                            <h4  style="margin: 15px 0;">Keep updated about our progress!</h4>
+                            <form action="https://bwns.be/stefan/emailphp.php" method="POST">
+                            <input name="emailField" id="email" type="email" style="">
+                            <input name="userName" id="username" type="text" value = "">
+                            <input type="submit" name="submit" value="Subscribe" class="button button-rounded button-shadow nott t700" style="background-color:#e23a27;">
+                            </form>
+						</div>
+					</div>
+				</div>
             
             <div class="section nobg mt-4" style="margin-bottom: 10px !important; padding-bottom: 10px !important;">
 					<div class="container">
@@ -131,10 +175,10 @@
 							<h2 class="capitalize t600 mb-2" style="font-size: 44px; letter-spacing: -1px">Contact Us</h2>
                             <p>If you have any questions or just want to share something awesome with us, you can send it to the email address below :)</p>
                             <p>email: <a href="mailto:contact@shortcircuitvr.com">contact@shortcircuitvr.com</a></p>
-                            <small>We are just 2 graduates working on this project so a reply could take a while, sorry!</small>
 						</div>
 					</div>
 				</div>
+            </div>
                 
         </section><!-- #content end -->
 
@@ -187,8 +231,7 @@
 						<div class="col-6 col-lg-3 mt-5 mt-lg-0">
 							<h4>Let us know what you think!</h4>
                             <a href="https://store.steampowered.com/app/970800/Short_Circuit_VR/" target="_blank" class="button button-rounded button-large button-shadow ls0 t400 ml-0 mb-2 nott steam-button"></a>
-							<a href="https://docs.google.com/forms/d/1o6qfHbzs10sEFx5H3EF6PSU7py7R5eb5K0SHzLu4qhs/" target="_blank" class="button button-rounded button-large button-shadow ls0 t700 ml-0 mb-2 nott google-forms">Google Forms</a>
-                            
+                            <a href="https://goo.gl/forms/ug5YAgNtX1dE2DK43" target="_blank" class="button button-rounded button-large button-shadow ls0 t700 ml-0 mb-2 nott google-forms">Interview Sign Up</a>
 						</div>
 					</div>
 

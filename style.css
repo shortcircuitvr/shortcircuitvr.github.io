@@ -11232,8 +11232,10 @@ input[type=checkbox]:not(:checked) + label.error { display: block !important; }
 	display: block;
 	margin-top: 30px;
 	width: 40px;
-	border-top: 2px solid #444;
+    /* no border */
+	/*border-top: 2px solid #444;*/
 }
+
 
 .center .heading-block:after,
 .heading-block.center:after,

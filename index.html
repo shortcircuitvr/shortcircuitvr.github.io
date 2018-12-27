@@ -60,8 +60,30 @@
     
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-    
-	
+    <!-- Mail Sign Up -->
+    <style>
+    #username {
+        visibility:hidden;
+        width: 0;
+        padding: 0;
+        border: 0;
+    }
+    #email{
+        height: 40px;
+        width: 300px;
+        border-radius: 5px; 
+        padding: 15px 10px; 
+        margin: 8px 0; 
+        box-sizing: border-box; 
+        border:2px solid #ccc; 
+        border-radius: 4px; 
+        font-size: 16px;
+    }
+        
+    #email:focus {
+        border: 2px solid #aaa;
+        }
+    </style>    
 
 	<!-- Document Title
 	============================================= -->
@@ -376,14 +398,29 @@
 						<div class="heading-block divcenter center" style="max-width: 600px">
 							<h2 class="capitalize t600 mb-2" style="font-size: 36px; letter-spacing: -1px">Why is it free?</h2>
                             <p>Electronics can look quite intimidating to begin with but once you know the basics, you can start creating really fun projects and eventually build so many creative things. <br>We hope that people can take their first steps into electronics by playing this game and hopefully get more interested in electronics and start learning more about it.</p>
-							<p>This is why our goal is to get as much feedback as we can. We want honest opinions from the people who have played or seen this game. Is it educational and fun enough? What are things that people like/don't like and things that we can improve on?</p>
                             <a href="https://store.steampowered.com/app/970800/Short_Circuit_VR/" target="_blank">
                             <div class="button button-xlarge ls0 button-rounded button-shadow nott t700 steam-button"></div>
                             </a>
 						</div>
 					</div>
 				</div>
-
+                
+                <!-- Mail Sign Up-->
+                <div class="section noborder nomargin " style="padding: 50px 0;">
+					<div class="container">
+						<div class="heading-block divcenter center" style="max-width: 600px">
+                            <h4  style="margin: 15px 0;">Keep updated about our progress!</h4>
+                            <form action="https://bwns.be/stefan/emailphp.php" method="POST">
+                            <input name="emailField" id="email" type="email" style="">
+                            <input name="userName" id="username" type="text" value = "">
+                            <input type="submit" name="submit" value="Subscribe" class="button button-rounded button-shadow nott t700" style="background-color:#e23a27;">
+                            </form>
+						</div>
+					</div>
+				</div>
+                
+                
+                
                 <!-- Game Reviews -->
 
                 <div class="fslider testimonial testimonial-full nobgcolor noborder noshadow" data-arrows="false"> 
@@ -430,9 +467,14 @@
 							<div class="col-md-7">
 								<div class="heading-block-white nobottomborder">
 									<h2 class="capitalize t600 mb-2" style="font-size: 36px; letter-spacing: -1px">How can you help us?</h2>
-									<p class="white-text">You can leave a review on our Steam page if you've tested out Short Circuit VR or <br>fill out the Google Forms where we'll ask a few questions and where you can share your opinion.</p>
-                                    <p class="white-text">This project is of course an early version and we would love to add a lot more features if people like it and if it proves that you can learn from it. We believe that by making something more interactive and fun, it will be easier to learn new things (in this case using Virtual Reality). Let us know what you think and if there are people that like the way we try to teach something in VR, then I guess we accomplished our goal.</p>
-                                    <img src="images/home-page/Logo_SteamEarlyAccess_Stacked.jpg" alt="steam early access logo">
+									<p class="white-text">We are currently planning on making a desktop version first so that it will be a lot more accessible for anyone who'd like to learn basic electronics. 
+                                        <br>That's why we are currently looking for people to interview and get to know how they teach/learn electronics and if there are certain problems they experience while doing that.
+                                    </p>
+                                    <p class="white-text">
+                                    These are ideally electronics teachers, students or hobbyists (beginner/expert), but if you do something else and you're also interested in our project than we'd still like to talk to you!
+                                    </p>
+                                    <p class="white-text">You can contact us by signing up with the Google Forms you can find on the right or <br>send a message to <a href="mailto:contact@shortcircuitvr.com" class="white-text">contact@shortcircuitvr.com</a></p>
+                                    <!--<img src="images/home-page/Logo_SteamEarlyAccess_Stacked.jpg" alt="steam early access logo">-->
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-5 mt-4 mt-md-0 sticky-sidebar-wrap">
@@ -444,7 +486,7 @@
 											<li class="mb-2">Thank you in advance!</li>
                                             <li class="mb-2">You da real MVP!</li>
 										</ul>
-										<a href="https://docs.google.com/forms/d/1o6qfHbzs10sEFx5H3EF6PSU7py7R5eb5K0SHzLu4qhs/" target="_blank" class="button button-rounded button-large button-shadow ls0 t700 ml-0 mb-2 nott google-forms">Give Feedback</a>
+										<a href="https://goo.gl/forms/ug5YAgNtX1dE2DK43" target="_blank" class="button button-rounded button-large button-shadow ls0 t700 ml-0 mb-2 nott google-forms">Interview Sign Up</a>
                                           
 									</div>
 									</div>
@@ -465,7 +507,6 @@
 									<h2 class="capitalize t600 mb-2" style="font-size: 44px; letter-spacing: -1px">Contact Us</h2>
                                     <p>If you have any questions or just want to share something awesome with us, you can send it to the email address below :)</p>
 									<p>email: <a href="mailto:contact@shortcircuitvr.com">contact@shortcircuitvr.com</a></p>
-                                    <small>We are just 2 graduates working on this project so a reply could take a while, sorry!</small>
 								</div>
 							</div>
 						</div>
@@ -524,7 +565,7 @@
 						<div class="col-6 col-lg-3 mt-5 mt-lg-0">
 							<h4>Let us know what you think!</h4>
                             <a href="https://store.steampowered.com/app/970800/Short_Circuit_VR/" target="_blank" class="button button-rounded button-large button-shadow ls0 t400 ml-0 mb-2 nott steam-button"></a>
-							<a href="https://docs.google.com/forms/d/1o6qfHbzs10sEFx5H3EF6PSU7py7R5eb5K0SHzLu4qhs/" target="_blank" class="button button-rounded button-large button-shadow ls0 t700 ml-0 mb-2 nott google-forms">Google Forms</a>
+							<a href="https://goo.gl/forms/ug5YAgNtX1dE2DK43" target="_blank" class="button button-rounded button-large button-shadow ls0 t700 ml-0 mb-2 nott google-forms">Interview Sign Up</a>
                             
 						</div>
 					</div>
